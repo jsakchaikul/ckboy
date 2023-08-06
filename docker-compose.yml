@@ -16,7 +16,9 @@ services:
       - mybooks-network
 
   web:
-    build: .
+    build:
+      context: ./myweb
+      dockerfile: Dockerfile
     container_name: mybooks-web
     restart: always
     depends_on:
